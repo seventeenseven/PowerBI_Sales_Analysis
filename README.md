@@ -27,22 +27,25 @@ This page focuses on **profitability** and **cost analysis**, offering insights 
 
 ### 3. **My Performance**  
 This page ranks the **top-performing salespeople** (Salesperson) and compares their performance against targets.  
+
 ---
 
 ### 4. **Product Details**  
 Detailed breakdown by products, including metrics like **average price** and **maximum price** with Row-level data security.  
+
 ---
 
 ## ⚙️ Data Model  
 The report uses a clean and optimized **data model**:  
-![Data Model](./img.png)
+![Data Model](./image.png)
+
 ---
 
 ## 📈 Key Measures  
 
 Here are some key DAX measures created for this report:
 
-### **1. Target**  
+### **1. Target**   :
 Calculates the total target amount for a salesperson.  
 ```DAX
 Target = 
@@ -51,7 +54,7 @@ IF(
     SUM(Targets[TargetAmount])
 )
 ```
-###**2. Variance**
+###**2. Variance** :
 Calculates the difference between actual sales and target amounts.
 ```DAX
 Variance = 
@@ -60,7 +63,7 @@ IF(
     SUM(Sales[Sales]) - [Target]
 )
 ```
-###**3. Sales YoY Growth**
+###**3. Sales YoY Growth** :
 Calculates Year-over-Year growth for sales.
 ```DAX
 Sales YoY Growth = 
@@ -88,3 +91,6 @@ RETURN
   
 ## 📂 Repository Contents
 SalesAnalysis.pbix: Power BI Report File.
+
+## Auteur
+Alexandra Jane Bitom
